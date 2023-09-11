@@ -34,8 +34,5 @@ double Bond::PriceBond(double currentInterestRate, double timeToMaturity) const 
     // Add the face value at maturity
     discountedCashFlow += 100 * pow(1 + (currentInterestRate / frequencyOfPayments), timeToMaturity * frequencyOfPayments);
 
-    // Calculate the bond's price
-    double bondPrice = discountedCashFlow;
-
-    return bondPrice;
+    return discountedCashFlow;
 }
