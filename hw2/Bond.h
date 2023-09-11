@@ -17,6 +17,7 @@ public:
     ~Bond();
 
     std::string ToString() const;
+    double PriceBond(double currentInterestRate, double timeToMaturity) const;
 };
 
 #endif
