@@ -13,6 +13,8 @@ int main() {
     // Print its characteristics using the ToString() function
     cout << "Custom Bond: " << customBond.ToString() << endl;
 
-    cout<<customBond.PriceBond(4.00,0.5,0.08,0.07);
+    cout<< "answer: " << customBond.PriceBond(4.2,0.5,0.08,0.07) << endl;
+
+
     return 0;
 }

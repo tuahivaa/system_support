@@ -42,18 +42,35 @@ double Bond::PriceBond(double timeToMaturity, double frequency, double c, double
     double discountFactor = 0.0;
     double presentValue = 0.0;
 
+    int integerPart = static_cast<int>(timeToMaturity);
+    double fractionalPart = timeToMaturity - integerPart;
+    std::cout << "Fractional part: " << fractionalPart << std::endl;
+
     double couponPayment = 100 * c * frequency;
-    for (int i = 1; i<(timeToMaturity*2)+1; i++){
-        if(i == (timeToMaturity*2+1)-1){
-            couponPayment+=100;
-        }
+    for (int i = 1; i<(integerPart*2)+1; i++){
+
+        
         discountFactor = exp(-i*frequency*i_rate);
         discountedCashFlow += couponPayment * discountFactor;
 
-        
         cout << "for i;" << i << ", amount= " << couponPayment << ", discountFacotr= " << discountFactor << endl;
 
 
+
+
+//TESTING
+        if(i == (integerPart*2+1)-1){
+            cout << (integerPart*2+1)-1 << endl;
+            if(fractionalPart > 0){
+                couponPayment += couponRate*fractionalPart+100;
+                cout<< "inside if statement: " << couponPayment << endl;
+            }else{
+                couponPayment+=100;
+            }
+            
+        }
+
+        
     }
 
 
