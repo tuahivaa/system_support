@@ -23,19 +23,6 @@ std::string Bond::ToString() const {
 
 // Bond pricing function
 double Bond::PriceBond(double timeToMaturity, double frequency, double c, double i_rate) const {
-    /*
-    double couponPayment = couponRate * 100; // Assuming face value  100
-    double discountedCashFlow = 0.0;
-
-    for (int i = 1; i <= (timeToMaturity * frequencyOfPayments); ++i) {
-        double discountFactor = 1 / pow(1 + (currentInterestRate / frequencyOfPayments), i);
-        discountedCashFlow += couponPayment * discountFactor;
-    }
-
-    // Add the face value at maturity
-    discountedCashFlow += 100 * pow(1 + (currentInterestRate / frequencyOfPayments), timeToMaturity * frequencyOfPayments);
-
-    */
 
     double discountedCashFlow = 0.0;
     double paymentDue = 0.0;
