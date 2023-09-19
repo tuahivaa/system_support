@@ -1,7 +1,10 @@
-#include <unordered_map>
-
 #ifndef TEST
 #define TEST
+
+#include <unordered_map>
+#include "Bond.h"
+
+
 
 class Test {
 public:
@@ -11,6 +14,7 @@ public:
 private:
     void test1(unordered_map<double, double> d);
     void test2();
+    Bond a;
 
 };
 

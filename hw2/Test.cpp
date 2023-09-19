@@ -2,11 +2,16 @@
 #include <iostream>
 #include <cassert>
 #include <unordered_map>
+#include <cmath>
+#include <iomanip> 
+
+#include "Bond.h"
+
 
 using namespace std;
 
 Test::Test() {
-    // Constructor, if needed
+    a = Bond("11/19/2035", 0.5, 0.08);
 }
 
 
@@ -42,6 +47,7 @@ void Test::runTests() {
     }
 
     test1(data);
+    test2();
 
 
 
@@ -55,9 +61,13 @@ void Test::test1(unordered_map<double, double> d){
     assert(data[8.9945] == 0.0068875);
     assert(data[8.989] == 0.006775);
     assert(data[8.9562] == 0.0066063);
-    cout << "Running Test 1: PASSED"<< endl;
+    cout << "Running Test 1: PASSED" << endl;
 }
 
 void Test::test2(){
-    
+    cout << "Running Test 2: Bond Pricing..." << endl;
+    double t = round(a.PriceBond(4.2,0.5,0.08,0.07) * 1000.0 ) / 1000.0 ;
+    // cout << t << endl;
+    assert( t == 103.145);
+    cout << "Running Test 2: PASSED" << endl;
 }
