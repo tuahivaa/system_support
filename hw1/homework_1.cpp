@@ -92,9 +92,9 @@ int main()
       } else{
         double a = average(dateToRate, userDate);
 
-        cout << "Rate for " << userDate << ": " << r << endl;
-        cout << "Difference between this rate the average rate since 1919-01 is: " << (r-a) << endl;
-        cout << "The average rate since 1919-01 is: " << a <<endl;
+        // cout << "Rate for " << userDate << ": " << r << endl;
+        // cout << "Difference between this rate the average rate since 1919-01 is: " << (r-a) << endl;
+        // cout << "The average rate since 1919-01 is: " << a <<endl;
       }
 
       

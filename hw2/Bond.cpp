@@ -31,7 +31,7 @@ double Bond::PriceBond(double timeToMaturity, double frequency, double c, double
 
     int integerPart = static_cast<int>(timeToMaturity);
     double fractionalPart = timeToMaturity - integerPart;
-    std::cout << "Fractional part: " << fractionalPart << std::endl;
+    // std::cout << "Fractional part: " << fractionalPart << std::endl;
 
     double couponPayment = 100 * c * frequency;
     for (int i = 1; i<(integerPart*2)+1; i++){
@@ -45,22 +45,22 @@ double Bond::PriceBond(double timeToMaturity, double frequency, double c, double
         discountFactor = exp(-i*frequency*i_rate);
         discountedCashFlow += couponPayment * discountFactor;
 
-        cout << "for i;" << i << ", amount= " << couponPayment << ", discountFacotr= " << discountFactor << " discountedCF= " << discountedCashFlow << endl;
+        // cout << "for i:" << i << ", amount= " << couponPayment << ", discountFacotr= " << discountFactor << " discountedCF= " << discountedCashFlow << endl;
 
 
 
 
         if(i == (integerPart*2+1)-1){
-            cout << (integerPart*2+1)-1 << endl;
+            // cout << (integerPart*2+1)-1 << endl;
             if(fractionalPart > 0){
-                cout << "couponPayment: " << couponPayment << " fraction: " <<  fractionalPart << " couponRate: " << couponRate << endl;
-                cout << "Amount: " << (couponRate*100)*fractionalPart+100 << endl;
+                // cout << "couponPayment: " << couponPayment << " fraction: " <<  fractionalPart << " couponRate: " << couponRate << endl;
+                // cout << "Amount: " << (couponRate*100)*fractionalPart+100 << endl;
 
                 discountFactor = exp(-i_rate*timeToMaturity);
-                cout << "final discount Factor: " << discountFactor << endl;
+                // cout << "final discount Factor: " << discountFactor << endl;
 
                 double pv = discountFactor*((couponRate*100)*fractionalPart+100);
-                cout << "PV: " << pv <<endl;
+                // cout << "PV: " << pv <<endl;
                 discountedCashFlow += pv;
                 //couponPayment += (couponRate*100)*fractionalPart+100;
                 //cout<< "inside if statement: " << couponPayment << endl;
