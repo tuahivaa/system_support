@@ -1,7 +1,7 @@
 This is a C++ program that demonstrates bond pricing and data analysis. The program reads financial data from a CSV file, performs calculations on bond pricing, and accesses data using C++ classes. Below, you'll find a description of the code, its purpose, and how to use it.
 
 
-1. Introduction<a name="introduction"></a>
+1. Introduction
 
 This program is designed to perform the following tasks:
 
@@ -18,7 +18,7 @@ C++ Standard Library
 <unordered_map>: For creating a dictionary-like data structure.
 <ctime>: For handling date and time calculations.
 
-3. Getting Started<a name="getting-started"></a>
+3. Getting Started
 
 To compile and run this program, follow these steps:
 
@@ -26,7 +26,7 @@ Ensure you have a C++ compiler installed (e.g., g++).
 Download the source code files (Bond.h, Bond.cpp, Data.h, Data.cpp, Test.h, Test.cpp, and main.cpp) to a local directory.
 Place the CSV file "Bond_Ex3.csv" in the same directory as the source code files.
 
-4. How to Use<a name="how-to-use"></a>
+4. How to Use
 
 To use this program, follow these steps:
 
