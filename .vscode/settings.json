@@ -47,7 +47,8 @@
         "ctime": "cpp",
         "ratio": "cpp",
         "valarray": "cpp",
-        "cassert": "cpp"
+        "cassert": "cpp",
+        "iomanip": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
